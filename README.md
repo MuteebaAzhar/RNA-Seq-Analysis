@@ -4,12 +4,12 @@
 
 This project aims to analyze the differential gene expression in human ovarian granulosa cells in the context of Polycystic Ovary Syndrome (PCOS). Using RNA-seq data from the GEO database (GSE138518), we identified key genes and pathways involved in PCOS pathogenesis. By leveraging the DESeq2 package, we conducted a robust differential expression analysis to uncover potential therapeutic targets for treating PCOS.
 
-The analysis focuses on filtering outliers using Cook's distance and visualizing results through MA plots, volcano plots, and identifying top differentially expressed genes. This project is significant in understanding molecular mechanisms underlying PCOS and exploring novel therapeutic avenues.
+The analysis focuses on filtering outliers using Cook's distance and visualizing results through PCA plots, MA plots, volcano plots, and identifying top differentially expressed genes. This project is significant in understanding molecular mechanisms underlying PCOS and exploring novel therapeutic avenues.
 
 ## Key Features
 - **RNA-Seq Data Analysis**: Raw sequencing data processed through DESeq2 for normalization, differential expression analysis, and visualization.
 - **Cook's Distance for Outlier Detection**: Outlier genes identified and filtered using Cook's distance, ensuring accurate results.
-- **MA and Volcano Plots**: Clear visual representation of the differential expression results using MA plots and volcano plots.
+- **PCA, MA, and Volcano Plots**: Clear visual representation of the differential expression results, including PCA plots to assess sample clustering and group separation.
 - **Top Gene Selection**: Identification and saving of the top 30 differentially expressed genes based on adjusted p-values.
   
 ## Tools and Technologies
@@ -33,10 +33,14 @@ The analysis focuses on filtering outliers using Cook's distance and visualizing
     - Key genes with significant differential expression were identified.
 
 4. **Visualization**:
+    - PCA plots were generated to assess sample clustering and confirm group separation between PCOS and control samples.
     - MA plots and volcano plots were generated to visualize gene expression changes.
     - The top 30 most significant genes were saved for further investigation.
 
 ## Visualizations
+
+### PCA Plot
+The PCA plot illustrates how PCOS and control samples cluster based on the principal components, providing insights into the variance in gene expression between the two groups.
 
 ### MA Plot
 The MA plot provides a quick overview of the distribution of log2 fold changes across the mean expression values, highlighting up- and down-regulated genes.
@@ -50,6 +54,4 @@ The analysis identified several genes that are differentially expressed between 
 
 ## Acknowledgments
 
-The RNA-seq data for this project was sourced from the publicly available GEO dataset [GSE138518](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138518). We gratefully acknowledge the original contributors of the dataset.
-
-
+The RNA-seq data for this project was sourced from the publicly available GEO dataset [GSE138518](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138518). We gratefully acknowledge the original contributors of the dataset. 
